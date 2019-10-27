@@ -8,22 +8,20 @@ use Illuminate\Http\Request;
 
 class ProjectsController extends Controller
 {
-    public function index() {
+    public function index() 
+    {
         $projects = Project::all();
 
         return view('projects.index', compact('projects'));
     }
 
-    public function store() {
-    // validate
+    public function store() 
+    {
+        $attributes = request()->validate(['title' => 'required', 'description' => 'required']);
+ 
+        Project::create($attributes);
 
-    // persist
-
-    Project::create(request(['title', 'description']));
-
-    // redirect
-
-    return redirect('/projects');
+        return redirect('/projects');
 
     }
 }

@@ -1,3 +1,5 @@
 ## Laracast birdboard tutorial
 
-Perfect way to spend a sunday.
+Practise Test Driven Development (TDD) and Laravel.
+
+https://laracasts.com/series/build-a-laravel-app-with-tdd
